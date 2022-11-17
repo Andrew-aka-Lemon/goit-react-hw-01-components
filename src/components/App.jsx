@@ -1,4 +1,4 @@
-import { Profile } from 'components/Profile/Profile';
+import Profile from 'components/Profile/Profile';
 import user from '../user.json';
 
 export const App = () => {
@@ -8,9 +8,7 @@ export const App = () => {
       tag={user.tag}
       location={user.location}
       avatar={user.avatar}
-      followers={user.stats}
-      views={user.stats}
-      likes={user.stats}
+      stats={user.stats}
     ></Profile>
   );
 };
