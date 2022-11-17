@@ -8,9 +8,9 @@ export const App = () => {
       tag={user.tag}
       location={user.location}
       avatar={user.avatar}
-      followers={user.stats.followers}
-      views={user.stats.views}
-      likes={user.stats.likes}
+      followers={user.stats}
+      views={user.stats}
+      likes={user.stats}
     ></Profile>
   );
 };
