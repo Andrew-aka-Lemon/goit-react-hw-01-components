@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-const Stats = styled.ul``;
+import {
+  ProfileItem,
+  Description,
+  Avatarka,
+  Username,
+  Tag,
+  Stats,
+  StatsItem,
+  Label,
+  Quantity,
+} from 'components/Profile/Profile.styled';
 
 export default function Profile({
   username,
@@ -11,29 +19,29 @@ export default function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <ProfileItem>
+      <Description className="">
+        <Avatarka src={avatar} alt="User avatar" className="avatar" />
+        <Username className="name">{username}</Username>
+        <Tag className="tag">@{tag}</Tag>
+        <Tag className="location">{location}</Tag>
+      </Description>
 
       <Stats className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
+        <StatsItem>
+          <Label className="label">Followers</Label>
+          <Quantity className="quantity">{followers}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label className="label">Views</Label>
+          <Quantity className="quantity">{views}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label className="label">Likes</Label>
+          <Quantity className="quantity">{likes}</Quantity>
+        </StatsItem>
       </Stats>
-    </div>
+    </ProfileItem>
   );
 }
 
