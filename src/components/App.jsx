@@ -23,7 +23,7 @@ export default function App() {
 
       <StyledFriendList friends={friends}></StyledFriendList>
 
-      {/* <TransactionHistory transactions={transactions}></TransactionHistory> */}
+      <TransactionHistory transactions={transactions}></TransactionHistory>
     </>
   );
 }
