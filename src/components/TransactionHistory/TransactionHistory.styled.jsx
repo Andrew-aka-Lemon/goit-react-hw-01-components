@@ -20,7 +20,7 @@ const HeaderRow = styled.th`
   padding: 10px 0;
 `;
 
-const THType = styled.td`
+const TransactionHistoryType = styled.td`
   text-transform: capitalize;
   text-align: left;
   padding-left: 20px;
@@ -35,5 +35,5 @@ export {
   TransactionHistoryHead,
   HeaderRow,
   TableRow,
-  THType,
+  TransactionHistoryType,
 };

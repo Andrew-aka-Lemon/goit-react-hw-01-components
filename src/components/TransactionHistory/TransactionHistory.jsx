@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {
   TransactionHistoryTable,
   TransactionHistoryHead,
-  THType,
+  TransactionHistoryType,
   HeaderRow,
   TableRow,
 } from 'components/TransactionHistory/TransactionHistory.styled';
@@ -22,7 +22,7 @@ export default function TransactionHistory({ transactions }) {
         {transactions.map(({ id, type, amount, currency }, index) => {
           return (
             <TableRow key={id} color={index % 2 === 0 ? '#f0f0f0' : '#d8d8d8'}>
-              <THType>{type}</THType>
+              <TransactionHistoryType>{type}</TransactionHistoryType>
               <td>{amount}</td>
               <td>{currency}</td>
             </TableRow>
