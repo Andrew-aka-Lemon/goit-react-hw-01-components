@@ -20,10 +20,10 @@ export default function App() {
       ></Profile>
 
       <Statistics title="Upload stats" stats={data}></Statistics>
-      {/* 
+
       <StyledFriendList friends={friends}></StyledFriendList>
 
-      <TransactionHistory transactions={transactions}></TransactionHistory> */}
+      {/* <TransactionHistory transactions={transactions}></TransactionHistory> */}
     </>
   );
 }

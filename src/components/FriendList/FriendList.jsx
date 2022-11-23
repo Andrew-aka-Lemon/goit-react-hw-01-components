@@ -1,26 +1,23 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-const StyledFriendList = styled.ul`
-  width: 200px;
-`;
-
-const IsOnline = styled.span`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-`;
+import {
+  StyledFriendList,
+  IsOnlineMarker,
+  ItemFriend,
+  Avatar,
+  Username,
+} from 'components/FriendList/Friendlist.styled';
 
 export default function FriendList({ friends }) {
   return (
     <StyledFriendList>
       {friends.map(({ avatar, isOnline, name, id }) => {
         return (
-          <li className="item" key={id}>
-            {isOnline && <IsOnline className="status"></IsOnline>}
-            <img className="avatar" src={avatar} alt="User avatar" width="48" />
-            <p className="name">{name}</p>
-          </li>
+          <ItemFriend key={id}>
+            {<IsOnlineMarker color={isOnline ? 'green' : 'red'} />}
+            <Avatar src={avatar} alt="User avatar" width="48" />
+            <Username>{name}</Username>
+          </ItemFriend>
         );
       })}
     </StyledFriendList>

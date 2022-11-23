@@ -14,10 +14,12 @@ const Header = styled.h2`
 
 const StatsList = styled.ul`
   width: 100%;
+
   text-decoration: none;
   list-style: none;
   margin: 0;
   padding: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
