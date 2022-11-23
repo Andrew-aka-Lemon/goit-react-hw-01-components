@@ -1,4 +1,7 @@
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Stats = styled.ul``;
 
 export default function Profile({
   username,
@@ -16,7 +19,7 @@ export default function Profile({
         <p className="location">{location}</p>
       </div>
 
-      <ul className="stats">
+      <Stats className="stats">
         <li>
           <span className="label">Followers</span>
           <span className="quantity">{followers}</span>
@@ -29,7 +32,7 @@ export default function Profile({
           <span className="label">Likes</span>
           <span className="quantity">{likes}</span>
         </li>
-      </ul>
+      </Stats>
     </div>
   );
 }
