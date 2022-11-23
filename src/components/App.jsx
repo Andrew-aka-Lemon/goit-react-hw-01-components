@@ -8,7 +8,7 @@ import data from 'data.json';
 import friends from 'friends.json';
 import transactions from 'transactions.json';
 
-export const App = () => {
+export default function App() {
   return (
     <>
       <Profile
@@ -18,10 +18,13 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       ></Profile>
+
       <Statistics title="qweqweqwewqeqweqwe" stats={data}></Statistics>
 
       <StyledFriendList friends={friends}></StyledFriendList>
+
       <TransactionHistory transactions={transactions}></TransactionHistory>
+      
     </>
   );
-};
+}
