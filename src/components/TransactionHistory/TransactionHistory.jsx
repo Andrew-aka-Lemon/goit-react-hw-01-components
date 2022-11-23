@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function TransactionHistory({ transactions }) {
   return (
-    <table class="transaction-history">
+    <table className="transaction-history">
       <thead>
         <tr>
           <th>Type</th>
@@ -15,10 +15,10 @@ export default function TransactionHistory({ transactions }) {
       <tbody>
         {transactions.map(({ id, type, amount, currency }) => {
           return (
-            <tr>
-              <td>Invoice</td>
-              <td>125</td>
-              <td>USD</td>
+            <tr key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
             </tr>
           );
         })}
