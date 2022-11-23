@@ -20,25 +20,25 @@ export default function Profile({
 }) {
   return (
     <ProfileItem>
-      <Description className="">
-        <Avatarka src={avatar} alt="User avatar" className="avatar" />
-        <Username className="name">{username}</Username>
-        <Tag className="tag">@{tag}</Tag>
-        <Tag className="location">{location}</Tag>
+      <Description>
+        <Avatarka src={avatar} alt="User avatar" />
+        <Username>{username}</Username>
+        <Tag>@{tag}</Tag>
+        <Tag>{location}</Tag>
       </Description>
 
-      <Stats className="stats">
+      <Stats>
         <StatsItem>
-          <Label className="label">Followers</Label>
-          <Quantity className="quantity">{followers}</Quantity>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
         </StatsItem>
         <StatsItem>
-          <Label className="label">Views</Label>
-          <Quantity className="quantity">{views}</Quantity>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
         </StatsItem>
         <StatsItem>
-          <Label className="label">Likes</Label>
-          <Quantity className="quantity">{likes}</Quantity>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
         </StatsItem>
       </Stats>
     </ProfileItem>

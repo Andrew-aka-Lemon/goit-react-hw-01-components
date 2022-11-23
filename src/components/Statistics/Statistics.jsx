@@ -1,47 +1,25 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-// const randomColor = () => {
-//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-// };
-
-const StatsList = styled.ul`
-  text-decoration: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Item = styled.li`
-  width: 50px;
-  height: 50px;
-  /* background-color: {(p => randomColor())}; */
-
-  span {
-    display: block;
-  }
-`;
-
-const Header = styled.h2`
-  text-align: center;
-`;
+import getRandomColor from 'Utils/getRandomColor';
+import {
+  StatsList,
+  StatsItem,
+  Header,
+  StatisticBox,
+} from 'components/Statistics/Statistics.styled';
 
 export default function Statistics({ title, stats }) {
   return (
-    <section>
+    <StatisticBox>
       {title && <Header>{title}</Header>}
       <StatsList>
         {stats.map(stat => (
-          <Item key={stat.id}>
+          <StatsItem key={stat.id} color={getRandomColor()}>
             <span>{stat.label}</span>
             <span>{stat.percentage}%</span>
-          </Item>
+          </StatsItem>
         ))}
       </StatsList>
-    </section>
+    </StatisticBox>
   );
 }
 

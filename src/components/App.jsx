@@ -18,9 +18,9 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
       ></Profile>
-      {/* 
-      <Statistics title="qweqweqwewqeqweqwe" stats={data}></Statistics>
 
+      <Statistics title="Upload stats" stats={data}></Statistics>
+      {/* 
       <StyledFriendList friends={friends}></StyledFriendList>
 
       <TransactionHistory transactions={transactions}></TransactionHistory> */}
