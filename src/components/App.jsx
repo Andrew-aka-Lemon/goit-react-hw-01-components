@@ -3,10 +3,10 @@ import Statistics from 'components/Statistics/Statistics';
 import StyledFriendList from 'components/FriendList/FriendList';
 import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
 
-import user from 'emulationData/user.json';
-import data from 'emulationData/data.json';
-import friends from 'emulationData/friends.json';
-import transactions from 'emulationData/transactions.json';
+import user from 'data/user.json';
+import data from 'data/data.json';
+import friends from 'data/friends.json';
+import transactions from 'data/transactions.json';
 
 export default function App() {
   return (
@@ -17,13 +17,13 @@ export default function App() {
         location={user.location}
         avatar={user.avatar}
         stats={user.stats}
-      ></Profile>
+      />
 
-      <Statistics title="Upload stats" stats={data}></Statistics>
+      <Statistics title="Upload stats" stats={data} />
 
-      <StyledFriendList friends={friends}></StyledFriendList>
+      <StyledFriendList friends={friends} />
 
-      <TransactionHistory transactions={transactions}></TransactionHistory>
+      <TransactionHistory transactions={transactions} />
     </>
   );
 }
